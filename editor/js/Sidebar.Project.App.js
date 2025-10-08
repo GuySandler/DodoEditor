@@ -81,6 +81,34 @@ function SidebarProjectApp( editor ) {
 
 	container.add( playButton );
 
+	const copyButton = new UIButton(strings.getKey("sidebar/project/app/play"));
+	copyButton.setWidth("170px");
+	copyButton.setMarginLeft("120px");
+	copyButton.setMarginBottom("10px");
+	copyButton.onClick(function () {
+		// if ( isPlaying === false ) {
+
+		// 	const mapfile = getLinkOrMapfile( 'mapfile' );
+		// 	isPlaying = true;
+		// 	copyButton.setTextContent( strings.getKey( 'sidebar/project/app/stop' ) );
+		// 	signals.startPlayer.dispatch();
+
+		// } else {
+
+		// 	isPlaying = false;
+		// 	copyButton.setTextContent( strings.getKey( 'sidebar/project/app/play' ) );
+		// 	signals.stopPlayer.dispatch();
+
+		// }
+
+		// I made this play the map
+		// window.open(getLinkOrMapfile("url"), "_blank");
+		navigator.clipboard.writeText(getLinkOrMapfile("url"));
+		alert("Map link copied to clipboard!");
+	});
+
+	container.add(copyButton);
+
 	// Get URL and mapfile
 
 	const urlButton = new UIButton( strings.getKey( 'sidebar/project/app/url' ) );
