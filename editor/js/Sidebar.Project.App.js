@@ -81,7 +81,7 @@ function SidebarProjectApp( editor ) {
 
 	container.add( playButton );
 
-	const copyButton = new UIButton(strings.getKey("sidebar/project/app/play"));
+	const copyButton = new UIButton(strings.getKey("sidebar/project/app/copy"));
 	copyButton.setWidth("170px");
 	copyButton.setMarginLeft("120px");
 	copyButton.setMarginBottom("10px");
